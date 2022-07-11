@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonos GdC</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/centros.css' %}">
+</head>
+<body>
+    <div class="page-header">
+        <a href="{% url 'nuevo_bono' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <h1><a href="/">Bonos GdC</a></h1>
+    </div>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

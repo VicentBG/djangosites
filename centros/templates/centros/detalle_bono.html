@@ -1,0 +1,15 @@
+{% extends 'centros/base.html' %}
+
+{% block content %}
+    <div class="bono">
+        <h2>{{ bono.codigo }}</h2>
+        <p>Centro: {{ bono.nombre_centro }}</p>
+        <p>Email: {{ bono.email }}</p>
+        <p>Agente: {{ bono.nombre_agente }}</p>
+        <p>Población: {{ bono.codpost }} - {{ bono.poblacion }}</p>
+        <div class="date">
+            <p>creado: {{ bono.created_at|linebreaksbr }}</p>
+        </div>
+        <a class="btn btn-default" href="{% url 'edita_bono' pk=bono.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    </div>
+{% endblock  %}

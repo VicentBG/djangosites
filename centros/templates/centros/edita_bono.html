@@ -1,0 +1,9 @@
+{% extends 'centros/base.html' %}
+
+{% block content %}
+    <h2>Alta de bono</h2>
+    <form method="POST" class="bono-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Guarda</button>
+    </form>
+{% endblock  %}

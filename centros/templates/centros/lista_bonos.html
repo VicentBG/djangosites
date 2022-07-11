@@ -1,0 +1,13 @@
+
+{% extends 'centros/base.html' %}
+{% block content %}
+    {% for bono in bonos %}
+        <div class="bono">
+            <h2>Bono número: <a href="{% url 'detalle_bono' pk=bono.pk %}">{{ bono.codigo }}</a></h2>
+            <p>Centro: {{ bono.nombre_centro }}</p>
+            <div class="date">
+                <p>creado: {{ bono.created_at|linebreaksbr }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
